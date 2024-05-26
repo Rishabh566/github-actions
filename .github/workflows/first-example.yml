@@ -5,9 +5,15 @@ jobs:
   first_job:
     runs-on: ubuntu-latest
     steps:
+      - name : checkout
+        uses: actions/checkout@v4.1.6
+
       - name: Welcome Message
         run: echo "This is first step from job 1" >> msg.txt
-
+      
       - name: List Files
         run: cat msg.txt
+
+      - name: Read dir
+        run: ls -la
         
