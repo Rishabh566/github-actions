@@ -10,4 +10,6 @@ jobs:
             - name: List files in repo
               run: ls -la
             - name: Executing Shell Script
-              run: ./Rishabh566/github-actions/.github/workflows/ascii.sh
+              run: |
+                chmod +x ascii.sh
+                ./ascii.sh
