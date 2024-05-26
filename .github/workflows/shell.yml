@@ -1,0 +1,13 @@
+name: shell workflow
+on: [push, ]
+jobs:
+    shellaction:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repo
+              uses: actions/checkout@v4
+
+            - name: List files in repo
+              run: ls -la
+            - name: Executing Shell Script
+              run: ./Rishabh566/github-actions/.github/workflows/ascii.sh
