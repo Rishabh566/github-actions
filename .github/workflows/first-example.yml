@@ -9,11 +9,11 @@ jobs:
         uses: actions/checkout@v4.1.6
 
       - name: Welcome Message
-        run: echo "This is first step from job 1" >> msg.txt
+        run: echo "This is first step from job 1" > msg.txt
       
       - name: List Files
-        run: cat msg.txt
-
-      - name: Read dir
-        run: ls -la
+        run: |
+          cat msg.txt
+          ls -la
+          cat README.md
         
