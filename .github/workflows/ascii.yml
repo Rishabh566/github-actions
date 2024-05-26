@@ -1,0 +1,23 @@
+name: This is ASCII JOB Artwork
+on: 
+    [push,pull_request]
+
+jobs:
+    create_artwork_job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout repo
+              uses: actions/checkout@v4.1.6
+              
+            - name: Install Cowsay
+              run: sudo apt-get install cowsay -y
+              
+            - name: Execute ASCII
+              run: |
+               cowsay -f dragon "Run for cover, I am a Dragon....... RAWR" > dragon.txt
+               cat dragon.txt
+
+            - name: list files
+              run: ls -la
+
+    
