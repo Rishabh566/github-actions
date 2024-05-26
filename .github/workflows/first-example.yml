@@ -16,6 +16,9 @@ jobs:
           cat msg.txt
           ls -la
           cat README.md
+
+      - name: Install Cowsay
+        run: sudo apt-get install cowsay -y
         
       - name: Generate ASCII Artwork
         run: |
