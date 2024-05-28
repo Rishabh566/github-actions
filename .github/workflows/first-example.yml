@@ -30,12 +30,14 @@ jobs:
   
   second_job:
             runs-on: ubuntu-latest
+            needs: first_job
             steps:
               - name : checkout
                 uses: actions/checkout@v4.1.6
         
               - name: Welcome Message
                 run: echo "This is  second job" >> msg2.txt
+                run: echo msg.txt
               
               - name: List Files
                 run: |
@@ -56,6 +58,7 @@ jobs:
 
   third_job:
                     runs-on: ubuntu-latest
+                    needs: second_job
                     steps:
                       - name : checkout
                         uses: actions/checkout@v4.1.6
