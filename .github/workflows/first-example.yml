@@ -1,4 +1,4 @@
-name : Multiple Job Workflow
+name : Multiple Job Workflow 1
 on: [push, ]
 
 jobs:
