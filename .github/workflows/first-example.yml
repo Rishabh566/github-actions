@@ -26,7 +26,7 @@ jobs:
           cat dragon.txt
       
       - name: upload artifact
-        uses: actions/upload-articact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: job1-text-file
           path: dragon.txt
@@ -61,7 +61,7 @@ jobs:
                   cat dragon2.txt
 
               - name: download artifact
-                uses: actions/download-articact@v3
+                uses: actions/download-artifact@v4
                 with:
                     name: job1-text-file
           
