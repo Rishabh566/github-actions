@@ -37,6 +37,8 @@ jobs:
         
               - name: Welcome Message
                 run: echo "This is  second job" >> msg2.txt
+
+              - name: Something from 1st job
                 run: echo msg.txt
               
               - name: List Files
