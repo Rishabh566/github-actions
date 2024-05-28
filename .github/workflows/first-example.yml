@@ -74,5 +74,5 @@ jobs:
                         
                       - name: Generate ASCII Artwork
                         run: |
-                          cowsay -f bird "Run for cover, I am a Dragon....... RAWR" > dragon3.txt
+                          cowsay -f dog "Run for cover, I am a Dragon....... RAWR" > dragon3.txt
                           cat dragon3.txt
