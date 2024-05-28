@@ -24,9 +24,14 @@ jobs:
         run: |
           cowsay -f dragon "Run for cover, I am a Dragon....... RAWR" > dragon.txt
           cat dragon.txt
+      
+      - name: upload artifact
+        uses: actions/upload-articact@v3
+        with:
+          name: job1-text-file
+          path: dragon.txt
 
-      - name: Sleep for some time.
-        run: sleep 30
+      
   
   second_job:
             runs-on: ubuntu-latest
@@ -55,8 +60,12 @@ jobs:
                   cowsay -f turtle "Run for cover, I am a turtle...... RAWR" > dragon2.txt
                   cat dragon2.txt
 
-              - name: Sleep for some time.
-                run: sleep 20
+              - name: download artifact
+                uses: actions/download-articact@v3
+                with:
+                    name: job1-text-file
+          
+              
 
   third_job:
                     runs-on: ubuntu-latest
